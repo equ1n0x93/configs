@@ -1,6 +1,5 @@
 # Copies local configs to configs git repo
 
-HOME="/Users/adahan"
 REPO="$HOME/dev/repositories/configs"
 
 #ipython
