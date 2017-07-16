@@ -1,0 +1,22 @@
+[user]
+	email = adahan@paloaltonetworks.com
+	name = AsafDahan
+[color]
+	ui = true
+[push]
+	default = tracking
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	co = checkout
+	st = status
+	br = branch
+	adda = add -u
+[http]
+[core]
+	editor = vim
+[branch]
+	autosetuprebase = always
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+
