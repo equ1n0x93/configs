@@ -84,12 +84,21 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Exports
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Aliases
-alias ll='ls -lGaf'
+alias l='ls -lafGh'
+alias ll='ls -lafGh'
+alias env='deactivate'
 alias env_lc='source ~/dev/virtual_env/lightcyber/bin/activate'
 alias hist='cat ~/.zsh_history'
 alias zsh_prof='vi ~/.zshrc'
-alias slack='slackcat --stream -c'
+alias slack='slackcat -s -c'
+alias slacku='cat ~/Documents/slack_users.txt'
 alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
+alias repo='cd ~/dev/repositories'
+alias repo_lc='cd ~/dev/repositories/lightcyber'
+alias repo_conf='cd ~/dev/repositories/configs'
 
