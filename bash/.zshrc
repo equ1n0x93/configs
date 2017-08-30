@@ -87,18 +87,29 @@ source $ZSH/oh-my-zsh.sh
 # Exports
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export SLACK_TOKEN='xoxp-2917321329-183595760565-183443474737-2f38e1188fdbcb780dffb2232a73df79'
+export REPOS_PATH=/Users/adahan/dev/repositories
+export LC_PATH=$REPOS_PATH/lightcyber
+export COOHA_PATH=$REPOS_PATH/cooha
+export PYTHONPATH=$COOHA_PATH:$LC_PATH/research/analyst/:$PYTHONPATH
 
 # Aliases
 alias l='ls -lafGh'
 alias ll='ls -lafGh'
-alias env='deactivate'
-alias env_lc='source ~/dev/virtual_env/lightcyber/bin/activate'
 alias hist='cat ~/.zsh_history'
 alias zsh_prof='vi ~/.zshrc'
 alias slack='slackcat -s -c'
-alias slacku='cat ~/Documents/slack_users.txt'
+alias slacku='python ~/dev/scripts/slack_users_search.py'
 alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
+
+# Alias - Virtual envs
+alias env='deactivate'
+alias env_lc='source ~/dev/virtual_env/lightcyber/bin/activate'
+alias env_res='source ~/dev/Virtual_env/tests/bin/activate'
+
+# Alias - Repositories directories
 alias repo='cd ~/dev/repositories'
 alias repo_lc='cd ~/dev/repositories/lightcyber'
 alias repo_conf='cd ~/dev/repositories/configs'
-
+alias repo_journals='cd ~/dev/repositories/journals'
+alias repo_res='cd ~/dev/repositories/research_repos'
