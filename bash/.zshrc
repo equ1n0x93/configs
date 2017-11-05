@@ -101,15 +101,21 @@ alias zsh_prof='vi ~/.zshrc'
 alias slack='slackcat -s -c'
 alias slacku='python ~/dev/scripts/slack_users_search.py'
 alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
+alias mkey='ssh-keygen'
+alias settings2='bash ~/dev/scripts/copy_settings.sh'
+alias tunnel_to='sudo ssh -X -L443:localhost:443 -L80:localhost:80 -o ExitOnForwardFailure=yes'
 
 # Alias - Virtual envs
 alias env='deactivate'
 alias env_lc='source ~/dev/virtual_env/lightcyber/bin/activate'
 alias env_res='source ~/dev/Virtual_env/tests/bin/activate'
 
-# Alias - Repositories directories
+# Alias - Repositories and directories
 alias repo='cd ~/dev/repositories'
 alias repo_lc='cd ~/dev/repositories/lightcyber'
+alias repo_malia='cd ~/dev/repositories/malia'
 alias repo_conf='cd ~/dev/repositories/configs'
 alias repo_journals='cd ~/dev/repositories/journals'
 alias repo_res='cd ~/dev/repositories/research_repos'
+
+alias scripts='cd ~/dev/scripts'

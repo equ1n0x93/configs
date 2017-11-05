@@ -10,7 +10,7 @@ cp -R "$HOME/.ssh" "$REPO/macOS/"
 rm "$REPO/macOS/.ssh/id_rs*"
 #iterm
 cp -R "$HOME/Library/Preferences/com.googlecode.iterm2.plist" "$REPO/macOS/.iterm/"
-#bash
+#bash/zsh
 cp "$HOME/.bash_profile" "$REPO/bash/"
 cp "$HOME/.zshrc" "$REPO/bash/"
 #git
