@@ -5,7 +5,7 @@ fi
 
 
 # Others
-export PATH="/Users/adahan/dev/repositories/lightcyber/:$PATH"
+export PATH="/Users/adahan/dev/repositories/lightcyber/:/Users/adahan/Downloads/:$PATH"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 

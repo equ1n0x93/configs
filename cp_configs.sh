@@ -16,4 +16,4 @@ cp "$HOME/.zshrc" "$REPO/bash/"
 #git
 cp "$HOME/.gitconfig" "$REPO/git/"
 #vim
-cp "$HOME/.vimrc" "$REPO/vim"
+cp "$HOME/.vimrc" "$REPO/vim/"
