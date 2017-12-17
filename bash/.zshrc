@@ -104,6 +104,8 @@ alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
 alias mkey='ssh-keygen'
 alias settings2='bash ~/dev/scripts/copy_settings.sh'
 alias tunnel_to='sudo ssh -X -L443:localhost:443 -L80:localhost:80 -o ExitOnForwardFailure=yes'
+alias cd_box='cd ~/Box'
+alias cd_research='cd ~/Box/Research'
 
 # Alias - Virtual envs
 alias env='deactivate'
