@@ -20,4 +20,6 @@ cp "$HOME/.vimrc" "$REPO/vim/"
 #homebrew
 rm -f "$REPO/macOS/Brewfile"
 brew bundle dump --file="$REPO/macOS/Brewfile"
+#scripts
+cp -R "$HOME/dev/scripts/" "$REPO/scripts/"
 

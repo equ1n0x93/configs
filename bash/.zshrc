@@ -92,6 +92,7 @@ export REPOS_PATH=/Users/adahan/dev/repositories
 export LC_PATH=$REPOS_PATH/lightcyber
 export COOHA_PATH=$REPOS_PATH/cooha
 export PYTHONPATH=$COOHA_PATH:$LC_PATH/research/analyst/:$PYTHONPATH
+PATH="$PATH:/Users/adahan/dev/scripts"
 
 # Aliases
 alias l='ls -lafGh'
@@ -119,5 +120,5 @@ alias repo_malia='cd ~/dev/repositories/malia'
 alias repo_conf='cd ~/dev/repositories/configs'
 alias repo_journals='cd ~/dev/repositories/journals'
 alias repo_res='cd ~/dev/repositories/research_repos'
-
 alias scripts='cd ~/dev/scripts'
+
