@@ -21,5 +21,5 @@ cp "$HOME/.vimrc" "$REPO/vim/"
 rm -f "$REPO/macOS/Brewfile"
 brew bundle dump --file="$REPO/macOS/Brewfile"
 #scripts
-cp -R "$HOME/dev/scripts/" "$REPO/scripts/"
+cp -R "$HOME/dev/scripts/" "$REPO/scripts/" && rm -rf "$REPO/scripts/*.pyc"
 
