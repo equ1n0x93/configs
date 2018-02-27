@@ -9,7 +9,7 @@ function send_run_command {
     tmux send-keys "$cmd" Enter
 }
 
-active=$(tmux list-windows | grep '(active)' | grep 'ipython')
+active=$(tmux list-windows | grep '(active)' | egrep 'portal|ipython')
 
 if ! [ "$active" == "" ]; then
     tmux send-keys "%cpaste" Enter

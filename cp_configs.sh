@@ -2,6 +2,8 @@
 
 REPO=`pwd`
 
+#pip
+pip list --format columns > "$REPO/pip/pip.list"
 #ipython
 rm -rf "$REPO/macOS/.ipython/profile_default/startup/*"
 cp -R "$HOME/.ipython/profile_default/startup" "$REPO/macOS/.ipython/profile_default/"
@@ -22,4 +24,7 @@ rm -f "$REPO/macOS/Brewfile"
 brew bundle dump --file="$REPO/macOS/Brewfile"
 #scripts
 cp -R "$HOME/dev/scripts/" "$REPO/scripts/" && rm -rf "$REPO/scripts/*.pyc"
+#tmux
+cp "$HOME/.tmux.conf" "$REPO/tmux/"
+cp "$HOME/.tmux.conf.local" "$REPO/tmux/"
 

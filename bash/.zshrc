@@ -88,11 +88,13 @@ source $ZSH/oh-my-zsh.sh
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export SLACK_TOKEN='xoxp-2917321329-183595760565-183443474737-2f38e1188fdbcb780dffb2232a73df79'
-export REPOS_PATH=/Users/adahan/dev/repositories
+export AUTOFOCUS_API_KEY='79f5fa8a-eee0-4328-96d6-e6dee1576857'
+export REPOS_PATH=$HOME/dev/repositories
 export LC_PATH=$REPOS_PATH/lightcyber
+export SCRIPTS_PATH=$HOME/dev/scripts
 export COOHA_PATH=$REPOS_PATH/cooha
 export PYTHONPATH=$COOHA_PATH:$LC_PATH/research/analyst/:$PYTHONPATH
-PATH="$PATH:/Users/adahan/dev/scripts"
+PATH="$PATH:$SCRIPTS_PATH"
 
 # Aliases
 alias l='ls -lafGh'
@@ -107,18 +109,31 @@ alias settings2='bash ~/dev/scripts/copy_settings.sh'
 alias tunnel_to='sudo ssh -X -L443:localhost:443 -L80:localhost:80 -o ExitOnForwardFailure=yes'
 alias cd_box='cd ~/Box'
 alias cd_research='cd ~/Box/Research'
+alias gita='git_aliases.sh'
+alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
-# Alias - Virtual envs
+# Virtual env
+export VIRTUAL_ENV_HOME=$HOME/dev/virtual_env
 alias env='deactivate'
-alias env_lc='source ~/dev/virtual_env/lightcyber/bin/activate'
-alias env_res='source ~/dev/Virtual_env/tests/bin/activate'
+alias vecreate='bash ${SCRIPTS_PATH}/venv_create.sh'
+alias env_lc='source ${VIRTUAL_ENV_HOME}/lightcyber/bin/activate'
+alias env_res='source ${VIRTUAL_ENV_HOME}/tests/bin/activate'
 
-# Alias - Repositories and directories
-alias repo='cd ~/dev/repositories'
-alias repo_lc='cd ~/dev/repositories/lightcyber'
-alias repo_malia='cd ~/dev/repositories/malia'
-alias repo_conf='cd ~/dev/repositories/configs'
-alias repo_journals='cd ~/dev/repositories/journals'
-alias repo_res='cd ~/dev/repositories/research_repos'
-alias scripts='cd ~/dev/scripts'
+# Repositories and directories
+alias repo='cd ${REPOS_PATH}'
+alias repo_lc='cd ${REPOS_PATH}/lightcyber'
+alias repo_malia='cd ${REPOS_PATH}/malia'
+alias repo_conf='cd ${REPOS_PATH}/configs'
+alias repo_sg='cd ${REPOS_PATH}/stargate'
+alias repo_journals='cd ${REPOS_PATH}/journals'
+alias repo_res='cd ${REPOS_PATH}/research_repos'
+alias scripts='cd ${SCRIPTS_PATH}'
+alias gdrive='cd ~/Google\ Drive'
+
+# Powerline
+powerline-daemon -q
+. $REPOS_PATH/powerline/powerline/bindings/zsh/powerline.zsh
+
+# tmux
+tmux new-session
 
