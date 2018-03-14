@@ -1,4 +1,4 @@
-# https://github.com/gpakosz/.tmux
+# https://github.com/g#ppakosz/.tmux
 # (‑●‑●)> dual licensed under the WTFPL v2 license and the MIT license,
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
@@ -52,13 +52,14 @@ tmux_conf_copy_to_os_clipboard=true
 
 ## Powerline display(asaf) ##
 run-shell "powerline-daemon -q"
-source "$(REPOS_PATH)/powerline/powerline/bindings/tmux/powerline.conf"
+#set -g default-terminal "screen-256color"
+source "/Users/adahan/dev/repositories/powerline/powerline/bindings/tmux/powerline.conf"
 
 # increase history size
 set -g history-limit 10000
 
 # start with mouse mode enabled
-set -g mouse on
+#set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -73,4 +74,12 @@ set -g mouse on
 # bind C-a send-prefix
 
 # move status line to top
-#set -g status-position top
+#set -g status-position bottom
+bind-key -n C-h select-pane -L
+bind-key -n C-j select-pane -D
+bind-key -n C-k select-pane -U
+bind-key -n C-l select-pane -R
+bind-key -n C-M-n new-window
+bind-key -n C-M-l next-window
+bind-key -n C-M-h previous-window
+set-option -g mode-keys vi
