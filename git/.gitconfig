@@ -1,6 +1,6 @@
 [user]
 	email = adahan@paloaltonetworks.com
-	name = AsafDahan
+	name = AsafD
 [color]
     diff = auto
     status = auto
@@ -33,6 +33,7 @@
     br = branch
     adda = add -u
     cma = commit -a -m
+    wip = commit -a -m "wip"
     bnew = checkout -b
     mg = merge --squash
 [http]
