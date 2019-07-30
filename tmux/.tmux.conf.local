@@ -53,8 +53,8 @@ tmux_conf_copy_to_os_clipboard=true
 ## Powerline display(asaf) ##
 run-shell "powerline-daemon -q"
 #set -g default-terminal "screen-256color"
-source "/Users/adahan/dev/repositories/powerline/powerline/bindings/tmux/powerline.conf"
-
+source "$POWERLINE_HOME/bindings/tmux/powerline.conf"
+# source "/Users/adahan/dev/repositories/powerline/powerline/bindings/tmux/powerline.conf"
 # increase history size
 set -g history-limit 10000
 

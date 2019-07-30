@@ -31,11 +31,17 @@
     co = checkout
     st = status
     br = branch
+    ps = "!git push && jenkins scan"
+    brl = for-each-ref --format=' %(authorname) %09 %(refname)' --sort=authorname
     adda = add -u
     cma = commit -a -m
     wip = commit -a -m "wip"
     bnew = checkout -b
     mg = merge --squash
+    bdel = branch -D
+    brdel = push origin --delete
+    forcedev = "!git commit --allow-empty -m \"--ci-force-dev\" && git push && jenkins scan"
+    fullreg = "!git commit --allow-empty -m \"--ci-full-regression\" && git push && jenkins scan"
 [http]
 [core]
 	editor = vim
